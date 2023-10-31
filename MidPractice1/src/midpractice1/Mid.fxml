@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="481.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="midpractice1.MidExamSceneController">
+   <children>
+      <TextField fx:id="elementTextField" layoutX="91.0" layoutY="61.0" prefHeight="25.0" prefWidth="126.0" />
+      <Button layoutX="6.0" layoutY="103.0" mnemonicParsing="false" onAction="#addElementsToValListOnClick" prefHeight="25.0" prefWidth="211.0" text="Add elements to valList" />
+      <Button layoutX="269.0" layoutY="21.0" mnemonicParsing="false" onAction="#createArr1instanceOnClick" prefHeight="55.0" prefWidth="176.0" text="Use valList to create MyArray instance 1 and clear valList" wrapText="true" />
+      <Button layoutX="269.0" layoutY="81.0" mnemonicParsing="false" onAction="#createArr2instanceOnClick" prefHeight="55.0" prefWidth="176.0" text="create instance arr2" />
+      <Button layoutX="485.0" layoutY="24.0" mnemonicParsing="false" onAction="#mergeArrayOnClick" prefHeight="98.0" prefWidth="163.0" text="Merge arr1 and arr2 and show results" wrapText="true" />
+      <Label layoutX="14.0" layoutY="65.0" text="Enter Element" />
+      <Label layoutX="14.0" layoutY="26.0" prefHeight="17.0" prefWidth="184.0" text="Populate Arraylist&lt;int&gt; valList" />
+      <Label layoutX="17.0" layoutY="151.0" prefHeight="17.0" prefWidth="144.0" text="Post Processing Results: ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="showResultTextArea" layoutX="17.0" layoutY="168.0" prefHeight="147.0" prefWidth="633.0" />
+      <RadioButton fx:id="forwardRadioButton" layoutX="112.0" layoutY="326.0" mnemonicParsing="false" text="Forward">
+         <toggleGroup>
+            <ToggleGroup fx:id="traverse" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="backwordRadiobutton" layoutX="187.0" layoutY="326.0" mnemonicParsing="false" text="Backword" toggleGroup="$traverse" />
+      <ComboBox fx:id="oddEvenCombo" layoutX="112.0" layoutY="354.0" prefWidth="150.0" />
+      <RadioButton fx:id="arr1RB" layoutX="124.0" layoutY="399.0" mnemonicParsing="false" text="arr1">
+         <toggleGroup>
+            <ToggleGroup fx:id="myArrInstance" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="arr2RB" layoutX="175.0" layoutY="399.0" mnemonicParsing="false" text="arr2" toggleGroup="$myArrInstance" />
+      <RadioButton fx:id="arr3RB" layoutX="227.0" layoutY="399.0" mnemonicParsing="false" text="arr3" toggleGroup="$myArrInstance" />
+      <TextArea fx:id="traverseResultTextArea" layoutX="361.0" layoutY="330.0" prefHeight="147.0" prefWidth="294.0" />
+      <Label layoutX="17.0" layoutY="326.0" text="Traversal Order" />
+      <Label layoutX="17.0" layoutY="358.0" text="Select Odd/Even" />
+      <Label layoutX="17.0" layoutY="399.0" text="Myarray instance" />
+      <Button layoutX="18.0" layoutY="423.0" mnemonicParsing="false" onAction="#traverseAndShowResultOnClick" prefHeight="44.0" prefWidth="272.0" text="Traverse as per the selection, and show result" />
+   </children>
+</AnchorPane>
